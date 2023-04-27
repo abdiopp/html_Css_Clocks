@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+$main-clr: #274146;
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+// .clock-part{
+//     background-color: #274146;
+// }
+
+// .clock-part{
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: center;
+//     min-height: 100vh;
+//     background: $main-clr;
+//     border: 2px solid black;
+//     border-radius: 40px;
+// }
+
+#time {
+    margin-bottom: 40px;
+    display: inline-flex;
+    justify-content: flex-end;
+    float: right;
+    // align-items: center;
+    // min-height: 100vh;
+    background: $main-clr;
+    // border: 2px solid black;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 2em;
+    font-weight: 600;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),
+        inset 5px 5px 20px rgba(225, 225, 225, 0.2),
+        inset -5px -5px 15px rgba(0, 0, 0, 0.75)
+}
+
+#time div {
+    position: relative;
+    width: 60px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--clr);
+}
+
+#time div:nth-child(1)::after,
+#time div:nth-child(2)::after {
+    content: ':';
+    position: absolute;
+    right: -4px;
+}
+
+#time div:last-child {
+    font-size: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#time div:nth-child(2)::after {
+    animation: animate 1s steps(1) infinite;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}

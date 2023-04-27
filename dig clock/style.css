@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+#time {
+  margin-bottom: 40px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  float: right;
+  background: #274146;
+  border-radius: 40px;
+  padding: 10px 20px;
+  font-size: 2em;
+  font-weight: 600;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 40px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 20px rgba(225, 225, 225, 0.2), inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5), inset 5px 5px 20px rgba(225, 225, 225, 0.2), inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+}
+
+#time div {
+  position: relative;
+  width: 60px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--clr);
+}
+
+#time div:nth-child(1)::after,
+#time div:nth-child(2)::after {
+  content: ':';
+  position: absolute;
+  right: -4px;
+}
+
+#time div:last-child {
+  font-size: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+#time div:nth-child(2)::after {
+  -webkit-animation: animate 1s steps(1) infinite;
+          animation: animate 1s steps(1) infinite;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
